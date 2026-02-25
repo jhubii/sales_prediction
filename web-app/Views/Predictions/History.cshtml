@@ -1,0 +1,27 @@
+@model List<web_app.Models.PredictionRecord>
+
+<h2>Prediction History</h2>
+
+<table border="1" cellpadding="6">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>CreatedAt (UTC)</th>
+            <th>Features</th>
+            <th>Prediction</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.CreatedAt</td>
+            <td style="max-width:600px; word-wrap:break-word;">@x.FeaturesJson</td>
+            <td>@x.Prediction</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<p><a asp-action="Create">New Prediction</a></p>

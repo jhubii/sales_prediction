@@ -1,0 +1,75 @@
+@{
+    ViewData["Title"] = "Create Prediction";
+}
+
+<h2>Create Prediction</h2>
+
+<form method="post">
+
+    <!-- Country -->
+    <div>
+        <label>Country</label>
+        <select name="features[Country]" required>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="New Zealand">New Zealand</option>
+            <option value="UK">UK</option>
+            <option value="USA">USA</option>
+        </select>
+    </div>
+
+    <br />
+
+    <!-- Product -->
+    <div>
+        <label>Product</label>
+        <select name="features[Product]" required>
+            <option value="50% Dark Bites">50% Dark Bites</option>
+            <option value="70% Dark Bites">70% Dark Bites</option>
+            <option value="85% Dark Bars">85% Dark Bars</option>
+            <option value="99% Dark & Pure">99% Dark & Pure</option>
+            <option value="After Nines">After Nines</option>
+            <option value="Almond Choco">Almond Choco</option>
+            <option value="Baker's Choco Chips">Baker's Choco Chips</option>
+            <option value="Caramel Stuffed Bars">Caramel Stuffed Bars</option>
+            <option value="Choco Coated Almonds">Choco Coated Almonds</option>
+            <option value="Drinking Coco">Drinking Coco</option>
+            <option value="Eclairs">Eclairs</option>
+            <option value="Fruit & Nut Bars">Fruit & Nut Bars</option>
+            <option value="Manuka Honey Choco">Manuka Honey Choco</option>
+            <option value="Milk Bars">Milk Bars</option>
+            <option value="Mint Chip Choco">Mint Chip Choco</option>
+            <option value="Orange Choco">Orange Choco</option>
+            <option value="Organic Choco Syrup">Organic Choco Syrup</option>
+            <option value="Peanut Butter Cubes">Peanut Butter Cubes</option>
+            <option value="Raspberry Choco">Raspberry Choco</option>
+            <option value="Smooth Sliky Salty">Smooth Sliky Salty</option>
+            <option value="Spicy Special Slims">Spicy Special Slims</option>
+            <option value="White Choc">White Choc</option>
+        </select>
+    </div>
+
+    <br />
+
+    <!-- Boxes Shipped -->
+    <div>
+        <label>Boxes Shipped</label>
+        <input type="number" step="1" min="0" name="features[Boxes_Shipped]" required />
+    </div>
+
+    <br />
+
+    <!-- Month -->
+    <div>
+        <label>Month (1–12)</label>
+        <input type="number" step="1" min="1" max="12" name="features[Month]" required />
+    </div>
+
+    <br />
+
+    <button type="submit">Predict (via FastAPI)</button>
+</form>
+
+<br />
+<p><a asp-action="History">View History</a></p>
