@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import gdown
+import os
 
 from db import init_db, insert_prediction, fetch_latest
 
