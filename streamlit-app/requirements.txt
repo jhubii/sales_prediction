@@ -3,4 +3,4 @@ joblib
 numpy
 pandas
 gdown
-sklearn
+scikit-learn
