@@ -1,0 +1,50 @@
+{
+    "all_features": [
+        "Country",
+        "Product",
+        "Boxes_Shipped",
+        "Month"
+    ],
+    "categorical_features": [
+        "Country",
+        "Product"
+    ],
+    "numeric_features": [
+        "Boxes_Shipped",
+        "Month"
+    ],
+    "categorical_values": {
+        "Country": [
+            "Australia",
+            "Canada",
+            "India",
+            "New Zealand",
+            "UK",
+            "USA"
+        ],
+        "Product": [
+            "50% Dark Bites",
+            "70% Dark Bites",
+            "85% Dark Bars",
+            "99% Dark & Pure",
+            "After Nines",
+            "Almond Choco",
+            "Baker's Choco Chips",
+            "Caramel Stuffed Bars",
+            "Choco Coated Almonds",
+            "Drinking Coco",
+            "Eclairs",
+            "Fruit & Nut Bars",
+            "Manuka Honey Choco",
+            "Milk Bars",
+            "Mint Chip Choco",
+            "Orange Choco",
+            "Organic Choco Syrup",
+            "Peanut Butter Cubes",
+            "Raspberry Choco",
+            "Smooth Sliky Salty",
+            "Spicy Special Slims",
+            "White Choc"
+        ]
+    }
+}
