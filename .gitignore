@@ -1,2 +1,3 @@
+models/*.pkl
 ml-training/datasets/processed/*
 ml-training/datasets/raw/*
