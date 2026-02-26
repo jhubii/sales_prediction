@@ -6,16 +6,29 @@ import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+import gdown
 
 from db import init_db, insert_prediction, fetch_latest
+
+FILE_ID = "12wWayMKI5I15hoyrqBP0HH32Fh4Cx43h"
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models" / "random_forest_sales_model.pkl"
 INFO_PATH = ROOT / "models" / "feature_info.json"
 
 
+def download_model():
+    os.makedirs(MODEL_PATH.parent, exist_ok=True)
+
+    if not MODEL_PATH.exists():
+        url = f"https://drive.google.com/uc?id={FILE_ID}"
+        gdown.download(url, str(MODEL_PATH), quiet=False)
+
+
 @st.cache_resource
 def load_artifacts():
+    download_model()
+
     model = joblib.load(MODEL_PATH)
     info = json.loads(INFO_PATH.read_text(encoding="utf-8"))
 
